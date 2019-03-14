@@ -15,26 +15,26 @@ jQuery(window).on("load",function() {
   jQuery(window).scroll(function() {
     var windowBottom = jQuery(this).scrollTop() + jQuery(this).innerHeight();
     jQuery(".fade").each(function(i, element) {
-      var objectBottom = jQuery(this).offset().top + jQuery(this).outerHeight();
-      if (objectBottom < windowBottom) {
-			if (jQuery(this).css('opacity')==0) {
-            jQuery(this).animate({
-							opacity: 1,
-							top: 0
-				    }, 700, function() {
-				    	// Animation complete.
-				});
+        var objectBottom = jQuery(this).offset().top + jQuery(this).outerHeight();
+        if (objectBottom < windowBottom) {
+            if (jQuery(this).css('opacity')==0) {
+                    jQuery(this).animate({
+                        opacity: 1,
+                        top: 0
+                }, 700, function() {
+                    // Animation complete.
+                });
             }
-      } else { 
-			if (jQuery(this).css('opacity')==1) {
-        	jQuery(this).animate({
-			    opacity: 0,
-			    top: "20px"
-			    }, 700, function() {
-			    	// Animation complete.
-			});
+        } else { 
+            if (jQuery(this).css('opacity')==1) {
+                jQuery(this).animate({
+                    opacity: 0,
+                    top: "20px"
+                }, 700, function() {
+                    // Animation complete.
+                });
+            }
         }
-      }
     });
   }).scroll(); 
 });
